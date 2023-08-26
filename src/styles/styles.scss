@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply hover:underline transition-all;
+}
+
+@import "./_variables";
+@import "./_base";
+
+@import "./_main";
+@import "./_header";
+@import "./_features";
+@import "./_parcel";
+@import "./_footer";
+
+@import "./_prismOverrides";
