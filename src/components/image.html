@@ -1,24 +1,41 @@
 <picture>
   <source
     srcset="
-      /src/assets/images/big-apple-1056753.jpg?as=webp&width=400,
-      /src/assets/images/new-york-new-york-1199734.jpg?as=webp&width=800 2x
+      /src/assets/images/{{ image }}?as=webp&width={{ image_width_mobile }}&height={{ image_height_mobile }},
+      /src/assets/images/{{ image }}?as=webp&width={{ image_width_mobile * 2 }}&height={{ image_height_mobile * 2 }} 2x
+    "
+    type="image/webp"
+    media="(max-width: 767px)"
+  />
+  <source
+    srcset="
+      /src/assets/images/{{ image }}?width={{ image_width_mobile }}&height={{ image_height_mobile }},
+      /src/assets/images/{{ image }}?width={{ image_width_mobile * 2 }}&height={{ image_height_mobile * 2 }} 2x
+    "
+    type="image/jpeg"
+    media="(max-width: 767px)"
+  />
+  <source
+    srcset="
+      /src/assets/images/{{ image }}?as=webp&width={{ image_width_desktop }}&height={{ image_height_desktop }},
+      /src/assets/images/{{ image }}?as=webp&width={{ image_width_desktop * 2 }}&height={{ image_height_desktop * 2 }} 2x
     "
     type="image/webp"
   />
   <source
     srcset="
-      /src/assets/images/big-apple-1056753.jpg?width=400,
-      /src/assets/images/new-york-new-york-1199734.jpg?width=800 2x
+      /src/assets/images/{{ image }}?width={{ image_width_desktop }}&height={{ image_height_desktop }},
+      /src/assets/images/{{ image }}?width={{ image_width_desktop * 2 }}&height={{ image_height_desktop * 2 }} 2x
     "
     type="image/jpeg"
   />
   <img
-    src="/src/assets/images/big-apple-1056753.jpg?width=800"
-    alt="test image"
-    width="800"
-    height="450"
-    loading="lazy"
-    fetchpriority="low"
+    src="/src/assets/images/{{ image }}?width={{ image_width_mobile }}&height={{ image_height_mobile }}"
+    class="{{ class }}"
+    width="{{ image_width_mobile }}"
+    height="{{ image_height_mobile }}"
+    loading="{{ loading_value }}"
+    fetchpriority="{{ fetchpriority_value }}"
+    alt="{{ image_alt }}"
   />
 </picture>
