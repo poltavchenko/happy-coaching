@@ -1,0 +1,30 @@
+@mixin placeholder {
+  &::input-placeholder { @content; }
+  &::placeholder { opacity: 1; @content; }
+  &:placeholder { @content; }
+  &:input-placeholder { @content; }
+  &.placeholder { @content; }
+}
+
+/// Font-size px to rem calc
+/// @example scss - Usage
+/// selector {
+///    @include rem-font-size(16px);
+/// }
+
+@mixin rem-font-size($pxSize) {
+  font-size: $pxSize;
+  font-size: ($pxSize / 10px) + rem;
+}
+
+@mixin animates {
+
+  .no-touch & {
+    transition:
+      color $animation-speed ease,
+      background $animation-speed ease,
+      border-color $animation-speed ease,
+      box-shadow $animation-speed ease,
+      opacity $animation-speed ease;
+  }
+}

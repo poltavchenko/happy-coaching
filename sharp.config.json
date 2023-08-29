@@ -5,6 +5,7 @@
     "mozjpeg": true
   },
   "webp": {
+    "quality": 75,
     "nearLossless": true
   },
   "png": {

@@ -1,0 +1,31 @@
+<if condition="button_tag === 'button' && button_type === 'button'">
+  <button
+    type="button"
+    class="button {{ button_class }}"
+  >
+    {{ button_text }}
+  </button>
+</if>
+<elseif condition="button_tag === 'button' && button_type === 'submit'">
+  <button
+    type="submit"
+    class="button {{ button_class }}"
+  >
+    {{ button_text }}
+  </button>
+</elseif>
+<elseif condition="button_tag === 'input'">
+  <input
+    type="submit"
+    class="button {{ button_class }}"
+    value="{{ button_text }}"
+  />
+</elseif>
+<else>
+  <a
+    href="{{ button_href }}"
+    class="button {{ button_class }}"
+  >
+    {{ button_text }}
+  </a>
+</else>

@@ -1,9 +1,7 @@
 module.exports = {
   content: [
+    '*.html',
     './src/**/*.html',
-    './src/**/*.js',
-    './src/**/*.jsx',
-    './src/**/*.tsx'
   ],
 
   safelist: [
@@ -29,30 +27,23 @@ module.exports = {
         heading: '1',
       },
 
-      typography: {
-        DEFAULT: {
-          css: {
-            color: 'var(--base-body-text)',
-            h1: {
-              margin: '0 0 20px',
-              color: 'inherit',
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'var(--heading-font-size)', //36px
-              lineHeight: '1.5',
-              fontWeight: 'var(--font-heading-weight)',
-            },
-          },
-        },
+      aspectRatio: {
+        'portrait': '1 / 1.25',
       },
     },
 
     screens: {
-      'xs': '375px',
+      'xs': '320px',
       'sm': '576px',
       'md': '768px',
       'lg': '1024px',
       'xl': '1200px',
-      '2xl': '1400px',
+      '2xl': '1440px',
+    },
+
+    container: {
+      center: true,
+      padding: 'calc(var(--grid-gutter-width) / 2)',
     },
 
     colors: {
@@ -61,6 +52,7 @@ module.exports = {
       current: 'currentColor',
       black: '#000',
       white: '#fff',
+      'body-text-color': 'var(--body-text-color)',
     },
 
     columns: {
@@ -260,6 +252,61 @@ module.exports = {
 
     fontSize: {
       'heading': 'var(--heading-font-size)', 
+      'h1': ['var(--heading-font-size)', {                   //36px
+        lineHeight: '1.5',
+        fontWeight: 'var(--font-heading-weight)',
+      }],
+      'h1-desktop': 'calc(var(--heading-font-size) + 10px)', //46px
+      'h2': ['calc(var(--heading-font-size) - 4px)', {       //32px
+        lineHeight: '1.5',
+        fontWeight: 'var(--font-heading-weight)',
+      }],
+      'h2-desktop': 'calc(var(--heading-font-size) + 4px)',  //40px
+      'h3': ['calc(var(--heading-font-size) - 10px)', {      //26px
+        lineHeight: '1.5',
+        fontWeight: 'var(--font-heading-weight)',
+      }],
+      'h3-desktop': 'var(--heading-font-size)',              //36px
+      'h4': ['calc(var(--heading-font-size) - 14px)', {      //22px
+        lineHeight: '1.5',
+        fontWeight: 'var(--font-heading-weight)',
+      }],
+      'h4-desktop': 'calc(var(--heading-font-size) - 4px)',  //32px
+      'h5': ['calc(var(--heading-font-size) - 16px)', {      //20px
+        lineHeight: '1.5',
+        fontWeight: 'var(--font-heading-weight)',
+      }],
+      'h5-desktop': 'calc(var(--heading-font-size) - 10px)',  //26px
+      'h6': ['calc(var(--heading-font-size) - 20px)', {       //16px
+        lineHeight: '1.5',
+        fontWeight: 'var(--font-heading-weight)',
+      }],
+      'h6-desktop': 'calc(var(--heading-font-size) - 14px)',   //22px
+      'title': ['var(--font-size-base)', {
+        lineHeight: 'var(--base-body-line-height)',
+        fontWeight: '600',
+      }],
+      'title-desktop': 'calc(var(--font-size-base) + 2px)',
+      'body-large': ['calc(var(--font-size-base) + 2px)', {
+        lineHeight: 'var(--base-body-line-height)',
+        fontWeight: 'var(--font-body-weight)',
+      }],
+      'body-medium': ['var(--font-size-base)', {
+        lineHeight: 'var(--base-body-line-height)',
+        fontWeight: 'var(--font-body-weight)',
+      }],
+      'body-small': ['calc(var(--font-size-base) - 2px)', {
+        lineHeight: 'var(--base-body-line-height)',
+        fontWeight: 'var(--font-body-weight)',
+      }],
+      'button-large': ['var(--font-size-base)', {
+        lineHeight: '1',
+        fontWeight: '600',
+      }],
+      'button-small': ['calc(var(--font-size-base) - 2px)', {
+        lineHeight: '1',
+        fontWeight: '600',
+      }],
     },
 
     borderRadius: {

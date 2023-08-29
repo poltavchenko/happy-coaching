@@ -1,11 +1,18 @@
 {
   "plugins": {
-    "posthtml-doctype": { "doctype": "HTML 5" },
+    "posthtml-doctype": {
+      "doctype": "HTML 5"
+    },
     "posthtml-include": {
       "root": "./src"
     },
     "posthtml-img-autosize": {
       "processEmptySize": true
+    },
+    "posthtml-modules": {
+      "root": "./src",
+      "attribute": "src",
+      "attributeAsLocals": true
     }
   }
 }

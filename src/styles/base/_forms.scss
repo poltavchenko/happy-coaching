@@ -1,0 +1,197 @@
+// forms
+
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+input[type="number"],
+textarea {
+  -webkit-appearance: none;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: $height-form-elements;
+  padding: $form-element-padding;
+  font-size: $font-size-base;
+  background: $base-background-color;
+  border: 1px solid $form-element-border-color;
+  -webkit-border-radius: $form-element-border-radius;
+  border-radius: $form-element-border-radius;
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+    box-shadow: 0 0 0 1000px #fff inset !important;
+    filter: none;
+  }
+  &:focus,
+  &:active {
+    border-color: $form-element-focus-border-color;
+  }
+
+  @include placeholder {
+    color: $placeholder-color;
+  }
+}
+
+input[type="number"] {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Remove extra spacing for search inputs in Safari */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+select {
+  box-sizing: border-box;
+  height: $height-form-elements;
+  padding: $form-element-padding;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: $font-size-base - 2px;
+  line-height: 1.3;
+  background: $base-background-color;
+  border: 1px solid $form-element-border-color;
+  -webkit-border-radius: $form-element-border-radius;
+  border-radius: $form-element-border-radius;
+}
+
+.select-holder {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 23px;
+    z-index: 2;
+    width: 8px;
+    height: 8px;
+    margin-top: -6px;
+    border-width: 0 0 2px 2px;
+    border-style: solid;
+    border-color: $gray;
+    cursor: pointer;
+    pointer-events: none;
+    transform: rotate(-45deg);
+  }
+  &:focus-within {
+    &::after {
+      margin-top: -1px;
+      transform: rotate(135deg);
+    }
+  }
+
+  select {
+    display: block;
+    width: 100%;
+    padding: 0 40px 0 12px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+}
+
+textarea {
+  vertical-align: top;
+  height: 88px;
+  min-height: 88px;
+  max-height: 300px;
+  border-radius: 0;
+  resize: vertical;
+}
+
+.button,
+button,
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 180px;
+  min-height: $height-form-elements;
+  padding: $button-padding;
+  color: $primary-button-text;
+  text-align: center;
+  background: $primary-button-background;
+  border: 1px solid $primary-button-border;
+  -webkit-border-radius: $button-border-radius;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  &:hover {
+    color: $primary-button-text-on-hover;
+    background: $primary-button-background-on-hover;
+    border-color: $primary-button-border-on-hover;
+  }
+  &:focus {
+    color: $primary-button-text-on-focus;
+    background: $primary-button-background-on-focus;
+    border-color: $primary-button-border-on-focus;
+    outline: 1px dashed $primary-button-border-on-focus;
+    outline-offset: 3px;
+  }
+  &.disabled,
+  &:disabled {
+    color: $primary-button-text-on-disabled;
+    background: $primary-button-background-on-disabled;
+    border-color: $primary-button-border-on-disabled;
+    outline: none !important;
+    cursor: default;
+    pointer-events: none;
+  }
+  &.default {
+    width: auto;
+    min-width: 0;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    font-weight: $font-body-weight;
+    color: $base-text-color;
+    background: none;
+    border: none;
+  }
+  &.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: $height-form-elements;
+    padding: 6px;
+  }
+}
+
+a.button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 1.375;
+  text-decoration: none;
+}
+
+input[type="file"] {
+  height: auto;
+  padding: 0;
+  color: inherit;
+  text-transform: none;
+  background: none;
+  &:hover {
+    color: inherit;
+    background: none;
+  }
+}
+
+.input-holder {
+  position: relative;
+  margin: 0 0 20px;
+}

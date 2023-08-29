@@ -1,0 +1,119 @@
+:root {
+
+  /* Colors */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #999;
+  --color-light-blue: #39f;
+  --body-text-color: var(--color-black);
+  --body-background-color: var(--color-white);
+
+  /* Typography */
+  --font-body: 'Neutraface', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+  --font-body-weight: 400;
+  --font-body-style: normal;
+  --font-heading: 'Didot', 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+  --font-heading-weight: 700;
+  --font-heading-style: normal;
+
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+
+  /* Primary button colors */
+  --primary-button-text-color: #000;
+  --primary-button-hover-text-color: #fff;
+  --primary-button-focus-text-color: #fff;
+  --primary-button-border-color: #999;
+  --primary-button-hover-border-color: #000;
+  --primary-button-focus-border-color: #000;
+  --primary-button-background-color: #999;
+  --primary-button-hover-background-color: #000;
+  --primary-button-focus-background-color: #000;
+  --primary-button-text-on-disabled: #fff;
+  --primary-button-border-on-disabled: #333;
+  --primary-button-background-on-disabled: #333;
+  --button-border-radius: 12px;
+
+  /* Form settings */
+  --height-form-element: 44px;
+  --height-button:    48px;
+  --form-element-border-radius: 4px;
+
+  /* Project variables */
+  --grid-gutter-width: 32px;
+
+  --body-min-width: 320px;
+  --header-logo-width-mobile: 140px;
+  --header-logo-width-desktop: 160px;
+}
+
+
+// Colors
+// Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+// Color names - http://name-of-color.com/
+
+// Colors variables for cms base styles
+$black: var(--color-black);
+$white: var(--color-white);
+$gray: var(--color-gray);
+$light-blue: var(--color-light-blue);
+
+// Body
+$base-font-family: var(--font-body);
+$font-size-base: var(--font-size-base);
+$line-height-base: var(--line-height-base);
+$font-body-weight: var(--font-body-weight);
+$base-text-color: var(--body-text-color);
+$base-background-color: var(--body-background-color);
+$vertical-rhythm: calc(1em * $line-height-base);
+
+$base-min-width: 320px;
+
+// Links
+$base-link-color: $light-blue;
+$base-link-hover-color: $gray;
+
+// Buttons
+$btn-color: $white !default;
+$btn-background: $black !default;
+$button-padding: 0.4em 0.7em !default;
+$btn-font-size: inherit !default;
+$button-border-radius: var(--button-border-radius);
+
+// Primary Buttons
+$primary-button-text: var(--primary-button-text-color) !default;
+$primary-button-text-on-hover: var(--primary-button-hover-text-color) !default;
+$primary-button-text-on-focus: var(--primary-button-focus-text-color) !default;
+$primary-button-border: var(--primary-button-border-color) !default;
+$primary-button-border-on-hover: var(--primary-button-hover-border-color) !default;
+$primary-button-border-on-focus: var(--primary-button-focus-border-color) !default;
+$primary-button-background: var(--primary-button-background-color) !default;
+$primary-button-background-on-hover: var(--primary-button-hover-background-color) !default;
+$primary-button-background-on-focus: var(--primary-button-focus-background-color) !default;
+$primary-button-text-on-disabled: var(--primary-button-text-on-disabled) !default;
+$primary-button-border-on-disabled: var(--primary-button-border-on-disabled) !default;
+$primary-button-background-on-disabled: var(--primary-button-background-on-disabled) !default;
+
+// Forms
+$height-form-elements: var(--height-form-element);
+$form-element-padding: $button-padding !default;
+$form-element-border-color: $gray !default;
+$form-element-focus-border-color: $black !default;
+$form-element-border-radius: var(--form-element-border-radius);
+$placeholder-color: $gray !default;
+
+// Headers
+$h1-font-size: 30px !default;
+$h2-font-size: 27px !default;
+$h3-font-size: 24px !default;
+$h4-font-size: 21px !default;
+$h5-font-size: 17px !default;
+$h6-font-size: 15px !default;
+$headings-font-family: var(--font-heading);
+$headings-font-weight: var(--font-heading-weight);
+$headings-font-style: var(--font-heading-style);
+$headings-line-height: 1.2 !default;
+$headings-color: inherit !default;
+
+$animation-speed: 0.3s !default;
+$animation-name: ease-in-out;

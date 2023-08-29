@@ -11,6 +11,7 @@
     "lint:js:fix": "eslint \"./src/scripts/**/*.{ts,js}\" --fix",
     "prettify": "prettier --write  \"src/**/*.html\"",
     "lint:styles": "stylelint \"./src/styles/**/*.{css,scss}\"",
+    "lint:styles:fix": "stylelint \"./src/styles/**/*.{css,scss}\" --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dmytro Poltavchenko",
@@ -31,7 +32,10 @@
     "postcss": "^8.4.27",
     "postcss-scss": "^4.0.1",
     "posthtml": "^0.16.6",
+    "posthtml-component": "^1.1.0",
+    "posthtml-expressions": "^1.11.1",
     "posthtml-img-autosize": "^0.1.6",
+    "posthtml-modules": "^0.9.1",
     "sass": "^1.64.1",
     "sharp": "0.29.1",
     "stylelint": "^14.5.3",
@@ -66,5 +70,9 @@
     "drafts": {
       "nesting": true
     }
+  },
+  "posthtml-modules": {
+    "attribute": "src",
+    "attributeAsLocals": true
   }
 }

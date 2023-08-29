@@ -28,15 +28,29 @@
 
     <link
       rel="stylesheet"
-      href="./src/styles/styles.scss"
-    />
-    <link
-      rel="stylesheet"
-      href="./src/styles/core.css"
+      href="./src/styles/style.scss"
     />
   </head>
   <body class="text-black">
-    <include src="./partials/main.html"></include>
+    <div
+      id="wrapper"
+      class="page-wrapper relative flex h-100 w-100 flex-col"
+    >
+      <!-- Header -->
+      <include src="./partials/header.html"></include>
+
+      <!-- Main -->
+      <main
+        id="main"
+        class="flex flex-1 flex-col"
+        role="main"
+      >
+        <include src="./partials/main.html"></include>
+      </main>
+
+      <!-- Footer -->
+      <include src="./partials/footer.html"></include>
+    </div>
 
     <script
       type="module"

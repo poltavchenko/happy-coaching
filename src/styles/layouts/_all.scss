@@ -1,0 +1,88 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  min-width: $base-min-width;
+  font-family: serif;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: $font-body-weight;
+  color: $base-text-color;
+  background: $base-background-color;
+}
+
+body,
+input,
+textarea,
+button,
+select {
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+}
+
+// adaptive images
+img {
+  width: 100%;
+}
+
+// google map fix
+.gm-style img {
+  max-width: none;
+}
+
+button,
+a,
+input[type="submit"],
+input[type="reset"],
+summary {
+  @include animates;
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+// transition for svg
+svg {
+  transition: stroke var(--animation-speed) ease-in-out, fill var(--animation-speed) ease-in-out;
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.fluid-iframe {
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+  }
+}
+
+// Important CSS for details-utils
+details-utils:not(:defined) [data-du-close-click] {
+  display: none;
+}
+
+/* stylelint-disable-next-line max-line-length */
+// The scroll-margin-top property lets you define a top margin that the browser should use when snapping a scrolled element into place.
+* {
+  scroll-margin-top: var(--header-sticky-height);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: calc(var(--grid-gutter-width) / 2);
+}
