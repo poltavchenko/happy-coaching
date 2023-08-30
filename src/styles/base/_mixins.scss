@@ -2,7 +2,6 @@
   &::input-placeholder { @content; }
   &::placeholder { opacity: 1; @content; }
   &:placeholder { @content; }
-  &:input-placeholder { @content; }
   &.placeholder { @content; }
 }
 
