@@ -3,3 +3,10 @@
 **/.hg
 **/node_modules
 **/.parcel-cache
+**/.cache
+input
+dist
+output
+
+# Components
+**/components

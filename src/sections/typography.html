@@ -92,12 +92,10 @@
         <div class="flex flex-wrap space-x-5">
           <module
             src="/components/button.html"
-            locals='{
-              "button_tag": "button",
-              "button_type": "button",
-              "button_class": "custom-class",
-              "button_text": "I am a button"
-            }'
+            button_tag="button"
+            button_type="button"
+            button_class="custom-class"
+            button_text="I am a button"
           ></module>
           <module
             src="/components/button.html"
@@ -112,6 +110,8 @@
             button_class="custom-class"
             button_text="I am a input"
           ></module>
+        </div>
+        <div class="flex flex-wrap space-x-5">
           <module
             src="/components/button.html"
             button_tag="link"
@@ -119,20 +119,6 @@
             button_class="custom-class"
             button_text="I am a link"
           ></module>
-        </div>
-        <div class="flex flex-wrap space-x-5">
-          <include
-            src="./components/link.html"
-            link_href="#"
-            link_class="button--primary"
-            link_text="Click me"
-          ></include>
-          <include
-            src="./components/single-button.html"
-            button_type="button"
-            button_class="button--primary"
-            button_text="Click me"
-          ></include>
         </div>
       </div>
       <h2 class="mb-5">Images</h2>
@@ -160,6 +146,20 @@
             image_height_mobile="400"
             image_width_desktop="462"
             image_height_desktop="603"
+            loading_value="lazy"
+            fetchpriority_value="high"
+            image_alt="image description"
+          ></module>
+        </div>
+        <div>
+          <module
+            src="/components/image.html"
+            image="img-hero-01-2x.jpg"
+            class="w-auto"
+            image_width_mobile="37"
+            image_height_mobile="40"
+            image_width_desktop="62"
+            image_height_desktop="60"
             loading_value="lazy"
             fetchpriority_value="high"
             image_alt="image description"
