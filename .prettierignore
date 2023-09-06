@@ -5,7 +5,6 @@
 **/.parcel-cache
 **/.cache
 input
-dist
 output
 
 # Components
