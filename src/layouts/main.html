@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <title>{{ title }}</title>
+  </head>
+  <body class="text-black">
+    <div
+      id="wrapper"
+      class="page-wrapper relative flex h-100 w-100 flex-col"
+    >
+      <!-- Header -->
+      <include src="partials/header.html"></include>
+      <!-- /Header -->
+
+      <!-- Main -->
+      <main
+        id="main"
+        class="flex flex-1 flex-col"
+        role="main"
+      >
+        <block name="main"></block>
+      </main>
+      <!-- /Main -->
+
+      <!-- Footer -->
+      <include src="partials/footer.html"></include>
+      <!-- /Footer -->
+    </div>
+    <script
+      src="/src/scripts/main.js"
+      type="module"
+    ></script>
+  </body>
+</html>

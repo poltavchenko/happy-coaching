@@ -1,24 +1,24 @@
 <picture>
   <source
-    srcset="/src/assets/images/{{ image }}?as=webp&width={{ image_width_mobile }}&height={{ image_height_mobile }}, /src/assets/images/{{ image }}?as=webp&width={{ image_width_mobile * 2 }}&height={{ image_height_mobile * 2 }} 2x"
+    srcset="/src/assets/images/{{ image }}.webp, /src/assets/images/{{ image_2x }}.webp 2x"
     type="image/webp"
     media="(max-width: 767px)"
   />
   <source
-    srcset="/src/assets/images/{{ image }}?width={{ image_width_mobile }}&height={{ image_height_mobile }}, /src/assets/images/{{ image }}?width={{ image_width_mobile * 2 }}&height={{ image_height_mobile * 2 }} 2x"
+    srcset="/src/assets/images/{{ image }}.{{ image_extension }}, /src/assets/images/{{ image_2x }}.{{ image_extension }} 2x"
     type="image/jpeg"
     media="(max-width: 767px)"
   />
   <source
-    srcset="/src/assets/images/{{ image }}?as=webp&width={{ image_width_desktop }}&height={{ image_height_desktop }}, /src/assets/images/{{ image }}?as=webp&width={{ image_width_desktop * 2 }}&height={{ image_height_desktop * 2 }} 2x"
+    srcset="/src/assets/images/{{ image_desktop }}.webp, /src/assets/images/{{ image_desktop_2x }}.webp 2x"
     type="image/webp"
   />
   <source
-    srcset="/src/assets/images/{{ image }}?width={{ image_width_desktop }}&height={{ image_height_desktop }}, /src/assets/images/{{ image }}?width={{ image_width_desktop * 2 }}&height={{ image_height_desktop * 2 }} 2x"
+    srcset="/src/assets/images/{{ image_desktop }}.{{ image_extension }}, /src/assets/images/{{ image_desktop_2x }}.{{ image_extension }} 2x"
     type="image/jpeg"
   />
   <img
-    src="/src/assets/images/{{ image }}?width={{ image_width_mobile }}&height={{ image_height_mobile }}"
+    src="/src/assets/images/{{ image }}.{{ image_extension }}"
     class="{{ class }}"
     width="{{ image_width_mobile }}"
     height="{{ image_height_mobile }}"
