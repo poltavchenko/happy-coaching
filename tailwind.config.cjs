@@ -52,6 +52,12 @@ module.exports = {
       current: 'currentColor',
       black: '#000',
       white: '#fff',
+      green: 'var(--color-green)',
+      brand: 'var(--color-brand)',
+      'brand-dark': 'var(--color-brand-dark)',
+      'secondary-background': 'var(--secondary-background)',
+      'off-white': 'var(--color-off-white)',
+      'dark-blue': 'var(--color-dark-blue)',
       'body-text-color': 'var(--body-text-color)',
     },
 
@@ -251,42 +257,6 @@ module.exports = {
     },
 
     fontSize: {
-      'heading': 'var(--heading-font-size)', 
-      'h1': ['var(--heading-font-size)', {                   //36px
-        lineHeight: '1.5',
-        fontWeight: 'var(--font-heading-weight)',
-      }],
-      'h1-desktop': 'calc(var(--heading-font-size) + 10px)', //46px
-      'h2': ['calc(var(--heading-font-size) - 4px)', {       //32px
-        lineHeight: '1.5',
-        fontWeight: 'var(--font-heading-weight)',
-      }],
-      'h2-desktop': 'calc(var(--heading-font-size) + 4px)',  //40px
-      'h3': ['calc(var(--heading-font-size) - 10px)', {      //26px
-        lineHeight: '1.5',
-        fontWeight: 'var(--font-heading-weight)',
-      }],
-      'h3-desktop': 'var(--heading-font-size)',              //36px
-      'h4': ['calc(var(--heading-font-size) - 14px)', {      //22px
-        lineHeight: '1.5',
-        fontWeight: 'var(--font-heading-weight)',
-      }],
-      'h4-desktop': 'calc(var(--heading-font-size) - 4px)',  //32px
-      'h5': ['calc(var(--heading-font-size) - 16px)', {      //20px
-        lineHeight: '1.5',
-        fontWeight: 'var(--font-heading-weight)',
-      }],
-      'h5-desktop': 'calc(var(--heading-font-size) - 10px)',  //26px
-      'h6': ['calc(var(--heading-font-size) - 20px)', {       //16px
-        lineHeight: '1.5',
-        fontWeight: 'var(--font-heading-weight)',
-      }],
-      'h6-desktop': 'calc(var(--heading-font-size) - 14px)',   //22px
-      'title': ['var(--font-size-base)', {
-        lineHeight: 'var(--base-body-line-height)',
-        fontWeight: '600',
-      }],
-      'title-desktop': 'calc(var(--font-size-base) + 2px)',
       'body-large': ['calc(var(--font-size-base) + 2px)', {
         lineHeight: 'var(--base-body-line-height)',
         fontWeight: 'var(--font-body-weight)',
@@ -298,14 +268,6 @@ module.exports = {
       'body-small': ['calc(var(--font-size-base) - 2px)', {
         lineHeight: 'var(--base-body-line-height)',
         fontWeight: 'var(--font-body-weight)',
-      }],
-      'button-large': ['var(--font-size-base)', {
-        lineHeight: '1',
-        fontWeight: '600',
-      }],
-      'button-small': ['calc(var(--font-size-base) - 2px)', {
-        lineHeight: '1',
-        fontWeight: '600',
       }],
     },
 
