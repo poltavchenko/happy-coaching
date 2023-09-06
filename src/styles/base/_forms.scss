@@ -114,14 +114,15 @@ textarea {
 .button,
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  min-width: 180px;
+  min-width: 250px;
   min-height: $height-form-elements;
   padding: $button-padding;
+  font-family: $base-font-family;
+  font-weight: 700;
   color: $primary-button-text;
   text-align: center;
   background: $primary-button-background;
@@ -129,6 +130,7 @@ input[type="submit"] {
   -webkit-border-radius: $button-border-radius;
   border-radius: $button-border-radius;
   cursor: pointer;
+  -webkit-appearance: none;
   &:hover {
     color: $primary-button-text-on-hover;
     background: $primary-button-background-on-hover;
