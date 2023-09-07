@@ -1,7 +1,14 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .menu-active {
 
   .menu__drop {
-    transform: translateX(0);
+    transform: translateX(0) !important;
   }
 
   .menu__btn-opener {
@@ -32,8 +39,8 @@
   z-index: 1000;
   background: $gray;
   transition: transform $animation-speed $animation-name;
+  transform: translateX(-100%);
   @include media("≤1199px") {
-    transform: translateX(-100%);
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -41,7 +48,8 @@
     position: static;
     height: auto;
     background: none;
-    transform: none;
+    transition: none;
+    transform: none !important;
   }
 }
 
@@ -101,7 +109,7 @@
     height: 2px;
     background: $black;
     border-radius: 2px;
-    transition: all $animation-speed ease-in-out;
+    transition: transform $animation-speed ease-in-out, opacity $animation-speed ease-in-out;
   }
   &::before,
   &::after {
@@ -120,7 +128,6 @@
 .logo {
   max-width: var(--header-logo-width-mobile);
   height: auto;
-  margin: 0 auto;
   @include media ("≥widescreen") {
     max-width: var(--header-logo-width-desktop);
   }
