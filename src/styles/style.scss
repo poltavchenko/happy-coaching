@@ -46,7 +46,7 @@ $media-expressions: (
 @import "base/helpers";
 @import "base/forms";
 @import "base/typography";
-// @import 'base/font-face';
+@import 'base/font-face';
 
 // CMS base styles
 @import "cms-base/cms-reset";
