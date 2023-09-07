@@ -13,7 +13,6 @@ h5,
 h6,
 .h6,
 .h {
-  margin: 0 0 20px;
   font-family: $headings-font-family;
   line-height: $headings-line-height;
   font-weight: $headings-font-weight;
@@ -26,6 +25,10 @@ h6,
     &:focus {
       color: inherit;
     }
+  }
+
+  .rte {
+    margin: 0 0 20px;
   }
 }
 
@@ -77,10 +80,23 @@ h6,
   }
 }
 
+.large-title {
+  font-size: $h1-font-size + 16px;
+  @include media ("≥desktop") {
+    font-size: $h1-font-size-desktop + 24px;
+  }
+}
+
 p {
   margin: 0 0 20px;
   @include media ("≥desktop") {
     margin: 0 0 24px;
+  }
+  &:last-child {
+
+    .rte & {
+      margin-bottom: 0;
+    }
   }
 }
 

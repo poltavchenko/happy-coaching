@@ -36,6 +36,7 @@ export default defineConfig({
       root: './src',
       plugins: [
         posthtmlModules({
+          root: './src',
           attribute: 'src',
           attributeAsLocals: true,
         }),

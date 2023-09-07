@@ -4,6 +4,7 @@
   --color-black: #000;
   --color-white: #fff;
   --color-gray: #999;
+  --color-gray-800: #606673;
   --color-off-white: #f8f8f8;
   --color-dark-blue: #0c111d;
   --color-light-blue: #39f;
@@ -61,6 +62,7 @@
 $black: var(--color-black);
 $white: var(--color-white);
 $gray: var(--color-gray);
+$gray-800: var(--color-gray-800);
 $light-blue: var(--color-light-blue);
 
 // Body
@@ -112,13 +114,13 @@ $h1-font-size: 32px !default;
 $h2-font-size: 28px !default;
 $h3-font-size: 24px !default;
 $h4-font-size: 20px !default;
-$h5-font-size: 16px !default;
+$h5-font-size: 18px !default;
 $h6-font-size: 14px !default;
 $h1-font-size-desktop: 48px !default;
 $h2-font-size-desktop: 36px !default;
 $h3-font-size-desktop: 30px !default;
 $h4-font-size-desktop: 26px !default;
-$h5-font-size-desktop: 22px !default;
+$h5-font-size-desktop: 24px !default;
 $h6-font-size-desktop: 20px !default;
 $headings-font-family: var(--font-heading);
 $headings-font-weight: var(--font-heading-weight);
