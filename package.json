@@ -14,7 +14,7 @@
     "not IE 11"
   ],
   "scripts": {
-    "start": "vite dev --open",
+    "start": "vite dev --host --open",
     "build": "rimraf dist && vite build && yarn prettify:build",
     "preview": "rimraf dist && vite build && vite preview --open",
     "lint:js": "eslint \"./src/scripts/**/*.{ts,js}\"",
