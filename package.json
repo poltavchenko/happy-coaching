@@ -16,7 +16,7 @@
   "scripts": {
     "start": "vite dev --host --open",
     "build": "rimraf dist && vite build && yarn prettify:build",
-    "preview": "rimraf dist && vite build && vite preview --open",
+    "preview": "rimraf dist && vite build && vite preview --host --open",
     "lint:js": "eslint \"./src/scripts/**/*.{ts,js}\"",
     "lint:js:fix": "eslint \"./src/scripts/**/*.{ts,js}\" --fix",
     "prettify": "prettier --write  \"src/**/*.{ts,js,jsx,html}\"",
