@@ -5,6 +5,7 @@
   --color-white: #fff;
   --color-gray: #999;
   --color-gray-800: #606673;
+  --color-gray-200: #edeff5;
   --color-off-white: #f8f8f8;
   --color-dark-blue: #0c111d;
   --color-light-blue: #39f;
@@ -64,6 +65,7 @@ $white: var(--color-white);
 $gray: var(--color-gray);
 $gray-800: var(--color-gray-800);
 $light-blue: var(--color-light-blue);
+$secondary-background: var(--secondary-background);
 
 // Body
 $base-font-family: var(--font-body);

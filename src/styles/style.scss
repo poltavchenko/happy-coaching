@@ -37,6 +37,7 @@ $media-expressions: (
 @tailwind components;
 @tailwind utilities;
 
+// Media queries
 @import "vendors/include-media";
 
 // Base styles
@@ -52,8 +53,12 @@ $media-expressions: (
 @import "cms-base/cms-reset";
 @import "cms-base/wp-reset";
 
+// Layouts
 @import "layouts/all";
 
 // Modules
 @import "modules/header";
 @import "modules/footer";
+
+// Components
+@import "components/scrollbar";

@@ -1,0 +1,20 @@
+.custom-scroll {
+  --scrollbar-bg: var(--body-background-color);
+  --thumb-bg: var(--color-brand);
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumb-bg) var(--scrollbar-bg);
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg);
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--thumb-bg);
+    border: 3px solid var(--scrollbar-bg);
+    border-radius: 10px;
+  }
+}
