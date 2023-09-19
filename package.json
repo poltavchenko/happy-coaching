@@ -19,8 +19,8 @@
     "preview": "rimraf dist && vite build && vite preview --host --open",
     "lint:js": "eslint \"./src/scripts/**/*.{ts,js}\"",
     "lint:js:fix": "eslint \"./src/scripts/**/*.{ts,js}\" --fix",
-    "prettify": "prettier --write  \"src/**/*.{ts,js,jsx,html}\"",
-    "prettify:build": "prettier --write  \"dist/*.html\"",
+    "prettify:html": "prettier --write \"src/**/*.html\"",
+    "prettify:build": "prettier --write \"dist/*.html\"",
     "lint:styles": "stylelint \"src/styles/**/*.{css,scss}\"",
     "lint:styles:fix": "stylelint \"src/styles/**/*.{css,scss}\" --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
