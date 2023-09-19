@@ -5,12 +5,12 @@
       <h2 class="h1 md:max-w-2xl">Stay Motivated, read the weekly blog articles.</h2>
     </div>
     <!-- blogs list -->
-    <div class="mb-8 grid gap-6 md:mb-11 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
+    <div class="mb-8 grid gap-6 md:mb-11 md:grid-cols-2 md:gap-8 lg:mb-14 lg:grid-cols-3 lg:gap-10">
       <a
         href="#"
-        class="block text-body-text-color no-underline hover:text-body-text-color xl:hover:shadow-md motion-safe:transition-shadow shadow-brand-dark xl:hover:shadow-md motion-safe:transition-shadow shadow-brand-dark"
+        class="block text-body-text-color no-underline shadow-brand-dark hover:text-body-text-color motion-safe:transition-shadow xl:hover:shadow-md"
       >
-        <div class="max-h-[160px] overflow-hidden">
+        <div class="relative max-h-[160px] overflow-hidden">
           <module
             src="/components/image.html"
             image="img-blog-01-1x"
@@ -18,7 +18,7 @@
             image_desktop="img-blog-01-1x"
             image_desktop_2x="img-blog-01-2x"
             image_extension="jpg"
-            class="w-100"
+            class="h-100 w-100 object-cover"
             image_width_mobile="356"
             image_height_mobile="160"
             loading_value="lazy"
@@ -38,9 +38,9 @@
       </a>
       <a
         href="#"
-        class="block text-body-text-color no-underline hover:text-body-text-color xl:hover:shadow-md motion-safe:transition-shadow shadow-brand-dark"
+        class="block text-body-text-color no-underline shadow-brand-dark hover:text-body-text-color motion-safe:transition-shadow xl:hover:shadow-md"
       >
-        <div class="max-h-[160px] overflow-hidden">
+        <div class="relative max-h-[160px] overflow-hidden">
           <module
             src="/components/image.html"
             image="img-blog-02-1x"
@@ -48,7 +48,7 @@
             image_desktop="img-blog-02-1x"
             image_desktop_2x="img-blog-02-2x"
             image_extension="jpg"
-            class="w-100"
+            class="h-100 w-100 object-cover"
             image_width_mobile="356"
             image_height_mobile="160"
             loading_value="lazy"
@@ -68,9 +68,9 @@
       </a>
       <a
         href="#"
-        class="block text-body-text-color no-underline hover:text-body-text-color xl:hover:shadow-md motion-safe:transition-shadow shadow-brand-dark"
+        class="block text-body-text-color no-underline shadow-brand-dark hover:text-body-text-color motion-safe:transition-shadow xl:hover:shadow-md"
       >
-        <div class="max-h-[160px] overflow-hidden">
+        <div class="relative max-h-[160px] overflow-hidden">
           <module
             src="/components/image.html"
             image="img-blog-03-1x"
@@ -78,7 +78,7 @@
             image_desktop="img-blog-03-1x"
             image_desktop_2x="img-blog-03-2x"
             image_extension="jpg"
-            class="w-100"
+            class="h-100 w-100 object-cover"
             image_width_mobile="356"
             image_height_mobile="160"
             loading_value="lazy"
@@ -96,8 +96,16 @@
           </div>
         </div>
       </a>
+    </div><!-- /blogs list -->
+    <div class="text-center">
+      <module
+        src="/components/button.html"
+        button_tag="link"
+        button_href="#"
+        button_class=""
+        button_text="Read more blogs"
+      ></module>
     </div>
-    <!-- /blogs list -->
   </div>
 </section>
 <!-- /blogs section  -->
