@@ -259,6 +259,10 @@ module.exports = {
     },
 
     fontSize: {
+      'body-x-large': ['calc(var(--font-size-base) + 6px)', {
+        lineHeight: 'var(--base-body-line-height)',
+        fontWeight: 'var(--font-body-weight)',
+      }],
       'body-large': ['calc(var(--font-size-base) + 2px)', {
         lineHeight: 'var(--base-body-line-height)',
         fontWeight: 'var(--font-body-weight)',
