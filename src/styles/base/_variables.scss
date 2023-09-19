@@ -40,12 +40,12 @@
   --primary-button-text-on-disabled: #fff;
   --primary-button-border-on-disabled: #999;
   --primary-button-background-on-disabled: #999;
-  --button-border-radius: 10px;
+  --button-border-radius: 8px;
 
   /* Form settings */
   --height-form-element: 44px;
   --height-button:       44px;
-  --form-element-border-radius: 4px;
+  --form-element-border-radius: 8px;
 
   /* Project variables */
   --grid-gutter-width: 32px;
@@ -106,10 +106,10 @@ $primary-button-background-on-disabled: var(--primary-button-background-on-disab
 // Forms
 $height-form-elements: var(--height-form-element);
 $form-element-padding: $button-padding !default;
-$form-element-border-color: $gray !default;
+$form-element-border-color: #d0d5dd !default;
 $form-element-focus-border-color: $black !default;
 $form-element-border-radius: var(--form-element-border-radius);
-$placeholder-color: $gray !default;
+$placeholder-color: #d0d5dd !default;
 
 // Headers
 $h1-font-size: 32px !default;
