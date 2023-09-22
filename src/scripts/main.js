@@ -37,10 +37,8 @@ class App {
     events.forEach((event) => {
       window.addEventListener(event, () => {
         const headerHeight = `${document.querySelector('#header')?.getBoundingClientRect().height}px`;
-        const headerPanelHeight = `${document.querySelector('.header__panel')?.getBoundingClientRect().height}px`;
 
         document.documentElement.style.setProperty('--header-height', headerHeight);
-        document.documentElement.style.setProperty('--header-sticky-height', headerPanelHeight);
       });
     });
   }

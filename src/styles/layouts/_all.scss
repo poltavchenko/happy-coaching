@@ -1,14 +1,4 @@
-html,
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 100%;
   min-width: $base-min-width;
   font-family: $base-font-family;
   font-size: $font-size-base;
@@ -16,6 +6,8 @@ body {
   font-weight: $font-body-weight;
   color: $base-text-color;
   background: $base-background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body,
@@ -78,7 +70,7 @@ details-utils:not(:defined) [data-du-close-click] {
 /* stylelint-disable-next-line max-line-length */
 // The scroll-margin-top property lets you define a top margin that the browser should use when snapping a scrolled element into place.
 * {
-  scroll-margin-top: var(--header-sticky-height);
+  scroll-margin-top: var(--header-height);
 }
 
 .container {
