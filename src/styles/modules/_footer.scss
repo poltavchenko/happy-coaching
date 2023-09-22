@@ -2,3 +2,45 @@
   position: relative;
   overflow: hidden;
 }
+
+.footer__nav {
+  margin: 0;
+  padding: 0;
+  list-style: none outside;
+
+  li {
+    margin: 0 0 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $base-text-color;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $base-link-hover-color;
+    }
+  }
+}
+
+.footer__address {
+  font-style: normal;
+
+  p {
+    margin: 0 0 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $base-text-color;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $base-link-hover-color;
+    }
+  }
+}
