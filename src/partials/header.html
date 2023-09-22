@@ -1,9 +1,9 @@
 <header
   id="header"
-  class="header"
+  class="header shadow-md"
 >
   <div class="container">
-    <div class="flex items-center justify-between py-2">
+    <div class="flex items-center justify-between py-4">
       <div class="logo flex-shrink-0">
         <a
           href="/"
@@ -11,26 +11,24 @@
         >
           <img
             src="/src/assets/logo.svg"
-            alt="Logo"
             width="150"
             height="28"
-            alt="Logo"
+            loading="lazy"
+            fetchpriority="low"
+            alt="Happy Coaching"
           />
         </a>
       </div>
       <div class="menu xl:flex xl:w-100 xl:justify-end">
-        <a
-          class="menu__btn-opener menu__opener page-wrapper__opener shrink-0 xl:hidden"
-          href="#"
-        >
+        <button class="menu__btn-opener menu__opener page-wrapper__opener shrink-0 xl:hidden">
           <span>Menu</span>
-        </a>
-        <nav
+        </button>
+        <div
           class="menu__drop"
           style="transform: translateX(-100%)"
         >
-          <div class="grid">
-            <div class="mb-6 px-4 py-4 xl:hidden">
+          <div class="flex h-100 w-100 flex-col xl:flex-row xl:items-center">
+            <div class="flex shrink-0 items-center justify-between px-4 py-4 shadow-md xl:hidden">
               <div class="logo">
                 <a
                   href="/"
@@ -38,30 +36,58 @@
                 >
                   <img
                     src="/src/assets/logo.svg"
-                    alt="Logo"
                     width="150"
                     height="28"
-                    alt="Logo"
+                    loading="lazy"
+                    fetchpriority="low"
+                    alt="Happy Coaching"
                   />
                 </a>
               </div>
+              <button class="menu__btn-opener menu__opener page-wrapper__opener shrink-0 xl:hidden">
+                <span>Menu</span>
+              </button>
             </div>
-            <ul
-              id="nav"
-              class="main-menu"
+            <div
+              class="pb-8 pt-4 max-xl:h-100 max-xl:overflow-y-auto max-xl:overflow-x-hidden xl:flex xl:items-center xl:py-0"
             >
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/about.html">About us</a>
-              </li>
-              <li>
-                <a href="/typography.html">Typography</a>
-              </li>
-            </ul>
+              <nav
+                class="mb-4 xl:mb-0"
+                aria-label="main navigation"
+              >
+                <ul
+                  id="nav"
+                  class="main-menu"
+                >
+                  <li class="is-active">
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="/services.html">Services</a>
+                  </li>
+                  <li>
+                    <a href="/about-us.html">About us</a>
+                  </li>
+                  <li>
+                    <a href="/extra-salespage.html">Extra Salespage</a>
+                  </li>
+                  <li class="hidden">
+                    <a href="/typography.html">Typography</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="px-4 xl:px-0">
+                <module
+                  src="/components/button.html"
+                  button_tag="link"
+                  button_href="#"
+                  button_class=""
+                  button_text="Get your free guide now"
+                ></module>
+              </div>
+            </div>
           </div>
-        </nav>
+        </div>
       </div>
     </div>
   </div>
