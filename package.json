@@ -29,6 +29,7 @@
     "@babel/core": "^7.17.9",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@fancyapps/ui": "^5.0.22",
+    "accordion-js": "^3.3.4",
     "autoprefixer": "^10.4.14",
     "eslint-plugin-prettier": "^5.0.0",
     "postcss": "^8.4.27",
