@@ -53,6 +53,7 @@
 .main-menu {
   @extend %listreset;
   width: 100%;
+  font-weight: bold;
   @include media ("≥widescreen") {
     display: flex;
     flex-wrap: wrap;
