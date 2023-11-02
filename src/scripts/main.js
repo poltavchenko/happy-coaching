@@ -124,10 +124,11 @@ class App {
   }
 
   initAccordion() {
-    const menuAccordion = document.querySelector('.js-accordion');
-    if (!menuAccordion) return;
-
-    new Accordion(menuAccordion, {
+    const menuAccordions = Array.from(document.querySelectorAll('.js-accordion'));
+  
+    if (menuAccordions.length === 0) return;
+  
+    new Accordion(menuAccordions, {
       triggerClass: 'accordion__trigger',
       duration: 400,
       collapse: true,
