@@ -88,39 +88,5 @@ details-utils:not(:defined) [data-du-close-click] {
     &:last-child {
       border-bottom: 0;
     }
-    // &.is-active {
-
-    //   .ac-trigger {
-    //     &::after {
-    //       content: "—";
-    //       padding-top: 0;
-    //       font-size: 12px;
-    //       font-weight: bold;
-    //     }
-    //   }
-    // }
-  }
-
-  .ac-trigger {
-    padding: 16px 32px 16px 0;
-    &:hover,
-    &:focus {
-      color: $base-text-color;
-    }
-    // &::after {
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   width: 24px;
-    //   height: 24px;
-    //   padding-top: 2px;
-    //   padding-left: 1px;
-    //   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    //   font-size: 20px;
-    //   font-weight: 300;
-    //   color: $green;
-    //   border: 2px solid $green;
-    //   border-radius: 100%;
-    // }
   }
 }
