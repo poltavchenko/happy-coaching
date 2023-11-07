@@ -1,6 +1,11 @@
 import MobileNav from './helpers/mobileNav';
 import './helpers/responsive-helper';
 
+// plugins
+// Accordion
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
+
 // import styles
 import '../styles/style.scss';
 
@@ -14,6 +19,7 @@ class App {
     this.setHeaderHeight();
     this.initIosScroll();
     this.initMobileNav();
+    this.initAccordion();
 
     if (!('ontouchstart' in document.documentElement)) {
       document.documentElement.classList.add('no-touch');
@@ -115,6 +121,20 @@ class App {
         hideOnClickOutside: false,
       });
     };
+  }
+
+  initAccordion() {
+    const menuAccordions = Array.from(document.querySelectorAll('.js-accordion'));
+  
+    if (menuAccordions.length === 0) return;
+  
+    new Accordion(menuAccordions, {
+      triggerClass: 'accordion__trigger',
+      duration: 400,
+      collapse: true,
+      showMultiple: false,
+      openOnInit: [0],
+    });
   }
 }
 

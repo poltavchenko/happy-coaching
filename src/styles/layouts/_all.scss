@@ -78,3 +78,15 @@ details-utils:not(:defined) [data-du-close-click] {
   margin: 0 auto;
   padding: 0 calc(var(--grid-gutter-width) / 2);
 }
+
+.accordion {
+
+  .ac {
+    margin: 0;
+    border-width: 0 0 1px;
+    border-color: $gray-200;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}

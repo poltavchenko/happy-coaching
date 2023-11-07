@@ -8,4 +8,5 @@ input
 output
 
 # Components
-**/components
+**/components/image.html
+**/components/button.html
