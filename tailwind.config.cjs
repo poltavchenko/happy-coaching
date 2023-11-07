@@ -55,6 +55,7 @@ module.exports = {
       'base-body': 'var(--body-text-color)',
       green: 'var(--color-green)',
       'brand': 'var(--color-brand)',
+      'gray-900': 'var(--color-gray-900)',
       'gray-800': 'var(--color-gray-800)',
       'gray-200': 'var(--color-gray-200)',
       'brand-dark': 'var(--color-brand-dark)',
