@@ -1,8 +1,8 @@
 import vituum from 'vituum';
 import { defineConfig } from 'vite';
 import posthtml from '@vituum/vite-plugin-posthtml';
-import viteImagemin from 'vite-plugin-imagemin';
 import posthtmlModules from 'posthtml-modules';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
   publicDir: false,
@@ -42,35 +42,65 @@ export default defineConfig({
         }),
       ],
     }),
-    viteImagemin({
-      gifsicle: {
-        optimizationLevel: 7,
-        interlaced: false,
-      },
-      webp: {
-        quality: 90,
-      },
-      optipng: {
-        optimizationLevel: 7,
-      },
-      mozjpeg: {
-        quality: 90,
-      },
-      pngquant: {
-        quality: [0.8, 0.9],
-        speed: 4,
-      },
-      svgo: {
+    ViteImageOptimizer({
+      test: /\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i,
+      exclude: undefined,
+      include: undefined,
+      includePublic: true,
+      logStats: true,
+      ansiColors: true,
+      svg: {
+        multipass: true,
         plugins: [
           {
-            name: 'removeViewBox',
+            name: 'preset-default',
+            params: {
+              overrides: {
+                cleanupNumericValues: false,
+                removeViewBox: false, // https://github.com/svg/svgo/issues/1128
+              },
+              cleanupIDs: {
+                minify: false,
+                remove: false,
+              },
+              convertPathData: false,
+            },
           },
+          'sortAttrs',
           {
-            name: 'removeEmptyAttrs',
-            active: false,
+            name: 'addAttributesToSVGElement',
+            params: {
+              attributes: [{ xmlns: 'http://www.w3.org/2000/svg' }],
+            },
           },
         ],
       },
+      png: {
+        // https://sharp.pixelplumbing.com/api-output#png
+        quality: 100,
+      },
+      jpeg: {
+        // https://sharp.pixelplumbing.com/api-output#jpeg
+        quality: 100,
+      },
+      jpg: {
+        // https://sharp.pixelplumbing.com/api-output#jpeg
+        quality: 100,
+      },
+      tiff: {
+        // https://sharp.pixelplumbing.com/api-output#tiff
+        quality: 100,
+      },
+      webp: {
+        // https://sharp.pixelplumbing.com/api-output#webp
+        lossless: true,
+      },
+      avif: {
+        // https://sharp.pixelplumbing.com/api-output#avif
+        lossless: true,
+      },
+      cache: false,
+      cacheLocation: undefined,
     }),
   ],
 });
