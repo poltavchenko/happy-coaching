@@ -17,6 +17,10 @@ module.exports = {
         '100dvh': '100dvh',
       },
 
+      spacing: {
+        '2/5': '40%',
+      },
+
       fontWeight: {
         'body-weight': 'var(--font-body-weight)',
         'heading-weight': 'var(--font-heading-weight)',
